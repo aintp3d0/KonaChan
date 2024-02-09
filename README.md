@@ -1,4 +1,7 @@
-# KonaChan
+# KonaChan.net
+
+![HomePage](./docs/readme/KonaChan.png)
+
 Anime wallpapers [ arts, pics ]
 - site: http://konachan.net/
 
