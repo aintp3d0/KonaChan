@@ -65,7 +65,6 @@ class KonaChan:
         if self._ques == 1:
             if not exists(self._dir_name):
                 mkdir(self._dir_name)
-                chdir(self._dir_name)
             chdir(self._dir_name)
             for a in range(1, gg + 1):
                 print('\nGot:__ ', self._url + str(a))
@@ -83,7 +82,6 @@ class KonaChan:
         elif self._ques == 2:
             if not exists(self._dir_name):
                 mkdir(self._dir_name)
-                chdir(self._dir_name)
             chdir(self._dir_name)
             try:
                 page_num = eval(input('        From what the page you wanna start?:_ '))
