@@ -37,6 +37,7 @@ class KonaChan:
         soup = BeautifulSoup(r, 'lxml')
         for j in soup.find_all('a', class_='directlink smallimg'):
             con = j.get('href')
+            # FIXME: `con` has a `schema`
             download("http:" + con)
 
     def get_true_artist(self):
