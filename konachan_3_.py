@@ -6,6 +6,9 @@ from requests import get
 from bs4 import BeautifulSoup
 
 
+URL_SCHEMA = 'http'
+
+
 class KonaChan:
     def __init__(self):
         self._url = 'http://konachan.net/artist?page='
@@ -37,8 +40,9 @@ class KonaChan:
         soup = BeautifulSoup(r, 'lxml')
         for j in soup.find_all('a', class_='directlink smallimg'):
             con = j.get('href')
-            # FIXME: `con` has a `schema`
-            download("http:" + con)
+            if not con.startswith(URL_SCHEMA):
+                con = f"{URL_SCHEMA}:{con}"
+            download(con)
 
     def get_true_artist(self):
         self._last_item()
