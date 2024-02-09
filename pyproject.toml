@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "konachan"
+version = "0.1.0"
+description = "Web crawler: Image downloader, artist data search"
+authors = ["ames0k0"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+bs4 = "^0.0.2"
+lxml = "^5.1.0"
+requests = "^2.31.0"
+wget = "^3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
